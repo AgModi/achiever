@@ -1,0 +1,12 @@
+CC EMI on UPI
+
+1. switchv2, UTH, router(not inclulded), NPCI, consumer
+2. OAuth for authentication
+
+Team
+1. 5 people - 2 Devs, 2 QA, 1 Product
+
+Problems faced
+1. Global FinTech fest failure due to U67. Issue at app end
+2. Testing on staging with mock data
+3. account
