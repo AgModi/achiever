@@ -4,10 +4,10 @@ import java.util.concurrent.*;
 
 public class ThreadConfigManager {
 
-    public static ExecutorService execServ1 = new ThreadPoolExecutor(2, 2, 0L, TimeUnit.MILLISECONDS,
-            new ArrayBlockingQueue<>(5), new ThreadFactory1());
+    public static ExecutorService execServ1 = new ThreadPoolExecutor(10, 10, 0L, TimeUnit.MILLISECONDS,
+            new LinkedBlockingDeque<>(5), new ThreadFactory1());
     public static ExecutorService execServ2 = new ThreadPoolExecutor(2, 3, 0L, TimeUnit.MILLISECONDS,
-            new ArrayBlockingQueue<>(5), new ThreadFactory2());
+            new LinkedBlockingDeque<>(5), new ThreadFactory2());
 
     public static void runAsync(String lock, Runnable r, ExecutorService tpExec) {
         System.out.println("In ThreadConfigManager.runAsync class");
